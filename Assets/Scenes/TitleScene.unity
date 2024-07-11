@@ -2644,7 +2644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: version 0.0.1
+  m_text: version 0.0.2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6165,7 +6165,6 @@ MonoBehaviour:
     type: 3}
   _originalScene:
     m_Handle: 0
-  _mainCamera: {fileID: 330585545}
   saveData:
     playerPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &2133160769
