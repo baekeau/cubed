@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/NavigationTutorial.unity
+    guid: a9234280438114c1abbca9fea4ea8b67
+  m_configObjects:
+    UnityEditor.XR.VisionOS.VisionOSSettings: {fileID: 11400000, guid: b68ee7db0be1d49a2bd172c49e92b12b,
+      type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 01cb1ab592fe446f6b0c9264976af673,
+      type: 2}
+    com.unity.polyspatial.xr.xr_settings: {fileID: 11400000, guid: 3c3681d579d2045c782fa5917323ffbb,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f78685fdadec140ae90eef73fee4683d,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a92e4795beff2458e8d2dc8157248879,
+      type: 2}
