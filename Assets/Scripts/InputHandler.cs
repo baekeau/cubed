@@ -6,8 +6,6 @@ public class InputHandler : MonoBehaviour
 {
     public Vector2 LeftStickInput { get; private set; }
     public Vector2 RightStickInput { get; private set; }
-    public bool JumpButtonPressed { get; private set; }
-    public bool AttackButtonPressed { get; private set; }
 
     [Required("Input Action Asset is required. Please assign.")]
     [SerializeField] private InputActionAsset _inputActionAsset;
@@ -62,15 +60,5 @@ public class InputHandler : MonoBehaviour
     private void OnLookInput(InputAction.CallbackContext context)
     {
         RightStickInput = context.ReadValue<Vector2>();
-    }
-    
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        JumpButtonPressed = context.ReadValueAsButton();
-    }
-    
-    private void OnAttack(InputAction.CallbackContext context)
-    {
-        AttackButtonPressed = context.ReadValueAsButton();
     }
 }
