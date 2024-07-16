@@ -7,9 +7,8 @@ using UnityEngine.Serialization;
 public class VolumeCameraController : MonoBehaviour
 {
     [SerializeField] private float _smoothSpeed = 0.5f; // Smoothing factor for camera movement
-    [SerializeField] private Vector3 _offset; // Offset between the camera and the character
+    private Vector3 _offset; // Offset between the camera and the character
     private GameObject _target; 
-    
 
     private void Awake()
     {
@@ -31,8 +30,8 @@ public class VolumeCameraController : MonoBehaviour
         }
         
         Debug.Log("Found player");
-        
         _target = GameManager.Instance.Player;
+        
         // calculate the initial offset based on the spawned character's position
         _offset = transform.position - _target.transform.position;
     }
@@ -49,7 +48,7 @@ public class VolumeCameraController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed * Time.deltaTime);
     }
 
-    public void RotateCamera(float rotationX, float rotationY)
+    public void RotateCamera(float rotationX)
     {
         transform.rotation *= Quaternion.Euler(0, rotationX, 0f);
     }
