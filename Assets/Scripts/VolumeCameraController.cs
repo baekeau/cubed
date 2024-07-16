@@ -39,8 +39,13 @@ public class VolumeCameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 _targetPosition = _target?.transform.position ?? transform.position;
-        Vector3 desiredPosition = _targetPosition + _offset; 
+        LerpVolumeCamera();
+    }
+
+    private void LerpVolumeCamera()
+    {
+        Vector3 targetPosition = _target?.transform.position ?? transform.position;
+        Vector3 desiredPosition = targetPosition + _offset; 
         transform.position = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed * Time.deltaTime);
     }
 
