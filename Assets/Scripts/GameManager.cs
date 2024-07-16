@@ -13,7 +13,6 @@ public class GameManager : SerializedMonoBehaviour
 
     [SerializeField] private GameObject _playerPrefab;
     [SerializeField] private Scene _originalScene;
-    // [SerializeField] private Camera _mainCamera;
 
     public SaveData saveData;
     private void Awake()

@@ -9,9 +9,11 @@ public class InputHandler : MonoBehaviour
 
     [Required("Input Action Asset is required. Please assign.")]
     [SerializeField] private InputActionAsset _inputActionAsset;
-    private InputActionMap _gameplayActionMap;
+    
+    private InputActionMap _playerActionMap;
     private InputAction _moveAction;
     private InputAction _lookAction;
+    private InputAction _jumpAction;
 
     private void Awake()
     {
@@ -24,12 +26,13 @@ public class InputHandler : MonoBehaviour
         // Enable the PlayerInput component
         playerInput.ActivateInput();
 
-        // Get the gameplay action map
-        _gameplayActionMap = playerInput.actions.FindActionMap("Player");
+        // Get the Player action map
+        _playerActionMap = playerInput.actions.FindActionMap("Player");
 
         // Get the move and look actions
-        _moveAction = _gameplayActionMap.FindAction("Move");
-        _lookAction = _gameplayActionMap.FindAction("Look");
+        _moveAction = _playerActionMap.FindAction("Move");
+        _lookAction = _playerActionMap.FindAction("Look");
+        _jumpAction = _playerActionMap.FindAction("Jump");
     }
 
     private void OnEnable()
@@ -39,7 +42,7 @@ public class InputHandler : MonoBehaviour
         _lookAction.performed += OnLookInput;
         _lookAction.canceled += OnLookInput;
 
-        _gameplayActionMap.Enable();
+        _playerActionMap.Enable();
     }
 
     private void OnDisable()
@@ -49,7 +52,7 @@ public class InputHandler : MonoBehaviour
         _lookAction.performed -= OnLookInput;
         _lookAction.canceled -= OnLookInput;
 
-        _gameplayActionMap.Disable();
+        _playerActionMap.Disable();
     }
 
     private void OnMoveInput(InputAction.CallbackContext context)
@@ -61,4 +64,6 @@ public class InputHandler : MonoBehaviour
     {
         RightStickInput = context.ReadValue<Vector2>();
     }
+    
+    
 }

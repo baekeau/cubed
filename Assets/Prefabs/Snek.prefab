@@ -326,7 +326,6 @@ GameObject:
   - component: {fileID: 1621336394164533401}
   - component: {fileID: 5253177049364707117}
   - component: {fileID: 8889951010900106698}
-  - component: {fileID: 1937307432278287329}
   m_Layer: 0
   m_Name: Snek
   m_TagString: Player
@@ -467,21 +466,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 3
+  _jumpSpeed: 5
   _rotationSpeed: 1
---- !u!114 &1937307432278287329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2479603909956242926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db0626bc5c57d45c7ad6807d9f7b1f10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _inputActionAsset: {fileID: -944628639613478452, guid: f7660eb5f935a44e78eadfd9aeb0e8a3,
-    type: 3}
+  _volumeCameraController: {fileID: 0}
+  _input: {fileID: 11400000, guid: 26b529802175448dc98116616bed2dfc, type: 2}
 --- !u!1 &3002332973003683882
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +680,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ac546314689e854b8fe7a04dee1fc86, type: 2}
+  - {fileID: 2100000, guid: d45cf14a1575845888dd3120af4c846b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
