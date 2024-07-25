@@ -108,6 +108,24 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""52fe9ab8-ab83-46db-a036-2975dc76cfa7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Triangle"",
+                    ""type"": ""Button"",
+                    ""id"": ""8125bab5-cb5e-4253-acec-9d616cca6a0e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -297,6 +315,28 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""R2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afef93ab-ac80-43bc-b58a-82b0b1497325"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e7113897-b5a4-4e6c-8bf1-f5a432fef903"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Triangle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -353,6 +393,8 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_Gameplay_L2 = m_Gameplay.FindAction("L2", throwIfNotFound: true);
         m_Gameplay_R1 = m_Gameplay.FindAction("R1", throwIfNotFound: true);
         m_Gameplay_R2 = m_Gameplay.FindAction("R2", throwIfNotFound: true);
+        m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
+        m_Gameplay_Triangle = m_Gameplay.FindAction("Triangle", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Resume = m_UI.FindAction("Resume", throwIfNotFound: true);
@@ -432,6 +474,8 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_L2;
     private readonly InputAction m_Gameplay_R1;
     private readonly InputAction m_Gameplay_R2;
+    private readonly InputAction m_Gameplay_Attack;
+    private readonly InputAction m_Gameplay_Triangle;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
@@ -445,6 +489,8 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         public InputAction @L2 => m_Wrapper.m_Gameplay_L2;
         public InputAction @R1 => m_Wrapper.m_Gameplay_R1;
         public InputAction @R2 => m_Wrapper.m_Gameplay_R2;
+        public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
+        public InputAction @Triangle => m_Wrapper.m_Gameplay_Triangle;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -481,6 +527,12 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @R2.started += instance.OnR2;
             @R2.performed += instance.OnR2;
             @R2.canceled += instance.OnR2;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Triangle.started += instance.OnTriangle;
+            @Triangle.performed += instance.OnTriangle;
+            @Triangle.canceled += instance.OnTriangle;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -512,6 +564,12 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @R2.started -= instance.OnR2;
             @R2.performed -= instance.OnR2;
             @R2.canceled -= instance.OnR2;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Triangle.started -= instance.OnTriangle;
+            @Triangle.performed -= instance.OnTriangle;
+            @Triangle.canceled -= instance.OnTriangle;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -586,6 +644,8 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         void OnL2(InputAction.CallbackContext context);
         void OnR1(InputAction.CallbackContext context);
         void OnR2(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnTriangle(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
