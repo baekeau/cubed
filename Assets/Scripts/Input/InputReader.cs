@@ -11,14 +11,12 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
 
     private void OnEnable()
     {
-        if (_gameInput == null)
-        {
-            _gameInput = new GameInput();
-            _gameInput.Gameplay.SetCallbacks(this);
-            _gameInput.UI.SetCallbacks(this);
+        if (_gameInput != null) return;
+        _gameInput = new GameInput();
+        _gameInput.Gameplay.SetCallbacks(this);
+        _gameInput.UI.SetCallbacks(this);
             
-            SetGamePlay();
-        }
+        SetGamePlay();
     }
 
     public void SetGamePlay()
@@ -41,11 +39,36 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
     public event Action PauseEvent;
     public event Action ResumeEvent;
 
+    public event Action DashEvent;
+    
+    public event Action L1Event;
+    public event Action L2Event;
+    public event Action R1Event;
+    public event Action R2Event;
+    
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        PauseEvent?.Invoke(); 
+        SetUI();
+    }
+
+    public void OnResume(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        ResumeEvent?.Invoke();
+        SetGamePlay();
+    }
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveEvent?.Invoke(context.ReadValue<Vector2>());
     }
-
+    
+    public void OnLook(InputAction.CallbackContext context)
+    {
+        LookEvent?.Invoke(context.ReadValue<Vector2>());
+    }
+    
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.phase == InputActionPhase.Performed)
@@ -57,23 +80,34 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
             JumpCancelledEvent?.Invoke();
         }
     }
-
-    public void OnPause(InputAction.CallbackContext context)
+    
+    public void OnDash(InputAction.CallbackContext context)
     {
         if (context.phase != InputActionPhase.Performed) return;
-        PauseEvent?.Invoke(); 
-        SetUI();
+        DashEvent?.Invoke();
     }
 
-    public void OnLook(InputAction.CallbackContext context)
+    public void OnL1(InputAction.CallbackContext context)
     {
-        LookEvent?.Invoke(context.ReadValue<Vector2>());
+        if (context.phase != InputActionPhase.Performed) return;  
+        L1Event?.Invoke();
     }
 
-    public void OnResume(InputAction.CallbackContext context)
+    public void OnL2(InputAction.CallbackContext context)
     {
         if (context.phase != InputActionPhase.Performed) return;
-        ResumeEvent?.Invoke();
-        SetGamePlay();
+        L2Event?.Invoke();
+    }
+
+    public void OnR1(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        R1Event?.Invoke();
+    }
+
+    public void OnR2(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        R2Event?.Invoke();
     }
 }
