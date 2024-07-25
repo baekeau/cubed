@@ -32,6 +32,20 @@ public class PlayerController : MonoBehaviour
         _input.L2Event += HandleL2;
         _input.R1Event += HandleR1;
         _input.R2Event += HandleR2;
+        _input.AttackEvent += HandleAttack;
+        _input.TriangleEvent += HandleTriangle;
+    }
+
+    private void HandleTriangle()
+    {
+        // handle triangle here
+        Debug.Log("Triangle");
+    }
+
+    private void HandleAttack()
+    {
+        // handle attack here
+        Debug.Log("Attack");
     }
 
     private void HandleR2()

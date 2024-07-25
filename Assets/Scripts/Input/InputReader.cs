@@ -46,6 +46,10 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
     public event Action R1Event;
     public event Action R2Event;
     
+    public event Action AttackEvent;
+    
+    public event Action TriangleEvent;
+    
     public void OnPause(InputAction.CallbackContext context)
     {
         if (context.phase != InputActionPhase.Performed) return;
@@ -109,5 +113,17 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
     {
         if (context.phase != InputActionPhase.Performed) return;
         R2Event?.Invoke();
+    }
+
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        AttackEvent?.Invoke();
+    }
+
+    public void OnTriangle(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed) return;
+        TriangleEvent?.Invoke();
     }
 }
