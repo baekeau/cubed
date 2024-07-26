@@ -45,9 +45,7 @@ public class InputReader : ScriptableObject, GameInput.IGameplayActions, GameInp
     public event Action L2Event;
     public event Action R1Event;
     public event Action R2Event;
-    
     public event Action AttackEvent;
-    
     public event Action TriangleEvent;
     
     public void OnPause(InputAction.CallbackContext context)
