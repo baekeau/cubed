@@ -35,7 +35,7 @@ public class GameManager : SerializedMonoBehaviour
 
     private Vector3 GetSpawnPosition()
     {
-        // Implement logic to determine the spawn position based on the current scene
+        // TODO: Implement logic to determine the spawn position based on the current scene
         return new Vector3(0, 2, -6.5f);
     }
     
@@ -96,7 +96,7 @@ public class GameManager : SerializedMonoBehaviour
         // add other data ..
         
         // serialize the saveData object
-        byte[] bytes = SerializationUtility.SerializeValue(saveData, DataFormat.JSON);
+        var bytes = SerializationUtility.SerializeValue(saveData, DataFormat.JSON);
         
         // save the serialized data to a file
         System.IO.File.WriteAllBytes(GetSaveFilePath(), bytes);
@@ -106,18 +106,16 @@ public class GameManager : SerializedMonoBehaviour
     public void LoadGame()
     {
         // Check if the save file exists
-        if (System.IO.File.Exists(GetSaveFilePath()))
-        {
-            // Load the serialized data from the file
-            byte[] bytes = System.IO.File.ReadAllBytes(GetSaveFilePath());
+        if (!System.IO.File.Exists(GetSaveFilePath())) return;
+        // Load the serialized data from the file
+        byte[] bytes = System.IO.File.ReadAllBytes(GetSaveFilePath());
 
-            // Deserialize the data
-            saveData = SerializationUtility.DeserializeValue<SaveData>(bytes, DataFormat.JSON);
+        // Deserialize the data
+        saveData = SerializationUtility.DeserializeValue<SaveData>(bytes, DataFormat.JSON);
 
-            // Apply the loaded data
-            Player.transform.position = saveData.playerPosition;
-            // Apply other loaded data
-        }
+        // Apply the loaded data
+        Player.transform.position = saveData.playerPosition;
+        // Apply other loaded data
     }
     private string GetSaveFilePath()
     {
