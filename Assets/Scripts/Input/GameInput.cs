@@ -63,6 +63,69 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""9b1cc311-8c3a-4cc4-88e5-37a1152b5213"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""L1"",
+                    ""type"": ""Button"",
+                    ""id"": ""53f73b6d-8284-4b6e-928d-63618d6e0467"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""L2"",
+                    ""type"": ""Button"",
+                    ""id"": ""b99858bf-6a4b-4933-94fc-1b54ae46444e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R1"",
+                    ""type"": ""Button"",
+                    ""id"": ""fa5fee8b-2fa5-4ef4-9740-bf3fb98d405f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R2"",
+                    ""type"": ""Button"",
+                    ""id"": ""3c28fa6d-985a-4d18-8c3a-00891d99e2ff"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""52fe9ab8-ab83-46db-a036-2975dc76cfa7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Triangle"",
+                    ""type"": ""Button"",
+                    ""id"": ""8125bab5-cb5e-4253-acec-9d616cca6a0e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -186,6 +249,94 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""413d55e8-244a-4225-afbf-3f48babfa1c8"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb4c5671-c3e9-454c-bf24-64beb0e90828"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22ef571e-da60-424a-97cc-c085ef1f55b9"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""L1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf26064f-29c3-43cd-902d-354734edb5e5"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""L2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40222f1e-4a98-42e9-8e97-0405f01f9399"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""R1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""166aaab8-050d-496c-b8f6-4e8457550d66"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""R2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""afef93ab-ac80-43bc-b58a-82b0b1497325"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e7113897-b5a4-4e6c-8bf1-f5a432fef903"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Triangle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -237,6 +388,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         m_Gameplay_Look = m_Gameplay.FindAction("Look", throwIfNotFound: true);
+        m_Gameplay_Dash = m_Gameplay.FindAction("Dash", throwIfNotFound: true);
+        m_Gameplay_L1 = m_Gameplay.FindAction("L1", throwIfNotFound: true);
+        m_Gameplay_L2 = m_Gameplay.FindAction("L2", throwIfNotFound: true);
+        m_Gameplay_R1 = m_Gameplay.FindAction("R1", throwIfNotFound: true);
+        m_Gameplay_R2 = m_Gameplay.FindAction("R2", throwIfNotFound: true);
+        m_Gameplay_Attack = m_Gameplay.FindAction("Attack", throwIfNotFound: true);
+        m_Gameplay_Triangle = m_Gameplay.FindAction("Triangle", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Resume = m_UI.FindAction("Resume", throwIfNotFound: true);
@@ -311,6 +469,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Pause;
     private readonly InputAction m_Gameplay_Look;
+    private readonly InputAction m_Gameplay_Dash;
+    private readonly InputAction m_Gameplay_L1;
+    private readonly InputAction m_Gameplay_L2;
+    private readonly InputAction m_Gameplay_R1;
+    private readonly InputAction m_Gameplay_R2;
+    private readonly InputAction m_Gameplay_Attack;
+    private readonly InputAction m_Gameplay_Triangle;
     public struct GameplayActions
     {
         private @GameInput m_Wrapper;
@@ -319,6 +484,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputAction @Look => m_Wrapper.m_Gameplay_Look;
+        public InputAction @Dash => m_Wrapper.m_Gameplay_Dash;
+        public InputAction @L1 => m_Wrapper.m_Gameplay_L1;
+        public InputAction @L2 => m_Wrapper.m_Gameplay_L2;
+        public InputAction @R1 => m_Wrapper.m_Gameplay_R1;
+        public InputAction @R2 => m_Wrapper.m_Gameplay_R2;
+        public InputAction @Attack => m_Wrapper.m_Gameplay_Attack;
+        public InputAction @Triangle => m_Wrapper.m_Gameplay_Triangle;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -340,6 +512,27 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
+            @L1.started += instance.OnL1;
+            @L1.performed += instance.OnL1;
+            @L1.canceled += instance.OnL1;
+            @L2.started += instance.OnL2;
+            @L2.performed += instance.OnL2;
+            @L2.canceled += instance.OnL2;
+            @R1.started += instance.OnR1;
+            @R1.performed += instance.OnR1;
+            @R1.canceled += instance.OnR1;
+            @R2.started += instance.OnR2;
+            @R2.performed += instance.OnR2;
+            @R2.canceled += instance.OnR2;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Triangle.started += instance.OnTriangle;
+            @Triangle.performed += instance.OnTriangle;
+            @Triangle.canceled += instance.OnTriangle;
         }
 
         private void UnregisterCallbacks(IGameplayActions instance)
@@ -356,6 +549,27 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
+            @L1.started -= instance.OnL1;
+            @L1.performed -= instance.OnL1;
+            @L1.canceled -= instance.OnL1;
+            @L2.started -= instance.OnL2;
+            @L2.performed -= instance.OnL2;
+            @L2.canceled -= instance.OnL2;
+            @R1.started -= instance.OnR1;
+            @R1.performed -= instance.OnR1;
+            @R1.canceled -= instance.OnR1;
+            @R2.started -= instance.OnR2;
+            @R2.performed -= instance.OnR2;
+            @R2.canceled -= instance.OnR2;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Triangle.started -= instance.OnTriangle;
+            @Triangle.performed -= instance.OnTriangle;
+            @Triangle.canceled -= instance.OnTriangle;
         }
 
         public void RemoveCallbacks(IGameplayActions instance)
@@ -425,6 +639,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
+        void OnL1(InputAction.CallbackContext context);
+        void OnL2(InputAction.CallbackContext context);
+        void OnR1(InputAction.CallbackContext context);
+        void OnR2(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnTriangle(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
