@@ -5,8 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94d4ef72-8e7c-4e96-83d4-e71ac08a580f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/StateMachine/ICharacterState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/StateMachine/IdleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/StateMachine/IdleState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/StateMachine/WalkingState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Character/StateMachine/WalkingState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Demos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Demos/DemoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Demos/DemoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Materials/RG_Palette.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Materials/RG_Palette.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Materials/SimpleSky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Materials/SimpleSky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Cloud-05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-01.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-01.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-02.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-02.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-03.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-03.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-04.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-04.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-05.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-05.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-06.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-06.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-07.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-07.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-08.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-08.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-09.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-09.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-10.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-10.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-11.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-11.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-12.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Models/RG_Terrain-Mesh-12.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Shaders/CloudsShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Shaders/CloudsShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Textures/RG_Palette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/LowPolyFantasyClouds/Textures/RG_Palette.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/FREE/Materials/M_Gecko.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/FREE/Materials/M_Gecko.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/_Scripts/QuirkySeriesDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/_Scripts/QuirkySeriesDemo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/_Scripts/RotateOnScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ImportedAssets/Quirky Series Ultimate/_Scripts/RotateOnScroll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/MathematicsDrawers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/MathematicsDrawers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Snek.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Snek.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/SaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/SaveData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Triggers/GlowTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Triggers/GlowTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Triggers/SceneTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Triggers/SceneTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VolumeCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VolumeCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TutorialInfo/Scripts/Readme.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

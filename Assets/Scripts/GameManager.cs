@@ -2,6 +2,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using ScriptableObjects;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 
