@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="94d4ef72-8e7c-4e96-83d4-e71ac08a580f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MaleCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MaleCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
