@@ -6,15 +6,12 @@ namespace Character
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float _speed = 3.0f;
-        [SerializeField] private float _jumpSpeed = 5.0f;
         [SerializeField] private float _rotationSpeed = 1.0f;
         [SerializeField] private VolumeCameraController _volumeCameraController;
         [SerializeField] private InputReader _input;
-        private Vector2 _moveDirection;
-        private Vector2 _lookDirection;
-        private bool _isJumping;
-        private Character _character;
+        [SerializeField] private Vector2 _moveDirection;
+        [SerializeField] private Vector2 _lookDirection;
+        [SerializeField] private Character _character;
 
         private void Start()
         {
@@ -31,50 +28,27 @@ namespace Character
             _input.R2Event += HandleR2;
             _input.AttackEvent += HandleAttack;
             _input.TriangleEvent += HandleTriangle;
-            _character = new Character();
-            _character.ChangeState(new IdleState());
+            _character = GetComponent<Character>();
 
         }
         private void Update()
         {
-            Move();
-            Jump();
+            UpdateCharacterMovement();
+            _character.UpdateState();
         }
-
-        private void Jump()
-        {
-            if (!_isJumping)
-            {
-                return;
-            }
-
-            transform.position += Vector3.up * (_jumpSpeed * Time.deltaTime);
-        }
-
+        
         private void LateUpdate()
         {
             RotateCamera();
         }
-
-        private void Move()
+        
+        private void UpdateCharacterMovement()
         {
-            if (_moveDirection == Vector2.zero)
-            {
-                return;
-            }
-
             Vector3 moveDirection = new Vector3(_moveDirection.x, 0, _moveDirection.y);
             Vector3 cameraDirection = _volumeCameraController.transform.TransformDirection(moveDirection);
-            transform.Translate(cameraDirection * (_speed * Time.deltaTime), Space.World);
-            if (!(_character is WalkingState))
-            {
-                _character.ChangeState(new WalkingState());
-            }
-            
-            if (cameraDirection != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(cameraDirection);
-            }
+            _character.SetMoveDirection(cameraDirection);
+            _character.Move();
+            _character.Jump();
         }
 
         private void RotateCamera()
@@ -152,12 +126,15 @@ namespace Character
 
         private void HandleCancelledJump()
         {
-            _isJumping = false;
+            _character.SetJumping(false);
+            Debug.Log("Jump cancelled");
+
         }
 
         private void HandleJump()
         {
-            _isJumping = true;
+            _character.SetJumping(true);
+            Debug.Log("Jump button pressed");
         }
 
        

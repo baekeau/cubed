@@ -1,20 +1,20 @@
 namespace Character.StateMachine
 {
-    public class WalkingState : ICharacterState
+    public class MovingState : ICharacterState
     {
         public void Enter(Character character)
         {
-            character.PlayAnimation("Walking");
+            character.SetAnimatorParameter("isMoving", true);
         }
 
         public void Update(Character character)
         {
-            // walking logic
+            // Handle moving logic and check for transitions
         }
 
         public void Exit(Character character)
         {
-            // cleanup if necessary
+            character.SetAnimatorParameter("isMoving", false);
         }
     }
 }

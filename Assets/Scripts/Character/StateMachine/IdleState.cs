@@ -1,18 +1,19 @@
+using UnityEngine;
+
 namespace Character.StateMachine
 {
     public class IdleState : ICharacterState
     {
         public void Enter(Character character)
         {
-            character.PlayAnimation("Idle");
+            character.SetAnimatorParameter("isMoving", false);
+            character.SetAnimatorParameter("isAttacking", false);
+            Debug.Log("Entered Idle State");
         }
 
         public void Update(Character character)
         {
-            if (character.IsMoving())
-            {
-                character.ChangeState(new WalkingState());
-            }
+            // check for state transitions
         }
 
         public void Exit(Character character)
@@ -20,7 +21,5 @@ namespace Character.StateMachine
             // cleanup if necessary
         }
         
-        
-        // TODO: what other states to implement?
     }
 }
