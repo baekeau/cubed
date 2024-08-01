@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94d4ef72-8e7c-4e96-83d4-e71ac08a580f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.cubed/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/StateMachine",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
