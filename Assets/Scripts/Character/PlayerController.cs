@@ -11,7 +11,7 @@ namespace Character
         [SerializeField] private InputReader _input;
         [SerializeField] private Vector2 _moveDirection;
         [SerializeField] private Vector2 _lookDirection;
-        [SerializeField] private Character _character;
+        private Character _character;
 
         private void Start()
         {
@@ -29,6 +29,12 @@ namespace Character
             _input.AttackEvent += HandleAttack;
             _input.TriangleEvent += HandleTriangle;
             _character = GetComponent<Character>();
+            if (_volumeCameraController != null) return;
+            _volumeCameraController = FindObjectOfType<VolumeCameraController>();
+            if (_volumeCameraController == null)
+            {
+                Debug.LogError("VolumeCameraController not found!");
+            }
 
         }
         private void Update()
