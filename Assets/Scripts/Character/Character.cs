@@ -12,8 +12,6 @@ namespace Character
         private ICharacterState _currentState;
         private Animator _animator;
 
-        public ICharacterState CurrentState => _currentState;
-
         private void Start()
         {
             _animator = GetComponent<Animator>();

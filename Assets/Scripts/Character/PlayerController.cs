@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace Character
 {
+    // Handles input
+    // Handles game flow (pause, resume, etc.)
+    // UI interaction
+    // 
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float _rotationSpeed = 1.0f;
@@ -11,10 +15,11 @@ namespace Character
         [SerializeField] private InputReader _input;
         [SerializeField] private Vector2 _moveDirection;
         [SerializeField] private Vector2 _lookDirection;
-        [SerializeField] private Character _character;
+        private Character _character;
 
         private void Start()
         {
+            // Subscribe to input events
             _input.MoveEvent += HandleMove;
             _input.LookEvent += HandleLook;
             _input.JumpEvent += HandleJump;
@@ -28,10 +33,18 @@ namespace Character
             _input.R2Event += HandleR2;
             _input.AttackEvent += HandleAttack;
             _input.TriangleEvent += HandleTriangle;
+            
+            // TODO: Clean this up, maybe move to VCController
             _character = GetComponent<Character>();
+            if (_volumeCameraController != null) return;
+            _volumeCameraController = FindObjectOfType<VolumeCameraController>();
+            if (_volumeCameraController == null)
+            {
+                Debug.LogError("VolumeCameraController not found!");
+            }
 
         }
-        private void Update()
+        private void FixedUpdate()
         {
             UpdateCharacterMovement();
             _character.UpdateState();
@@ -60,6 +73,7 @@ namespace Character
 
             _volumeCameraController.RotateCamera(_lookDirection.x * _rotationSpeed);
         }
+        
         private void HandleTriangle()
         {
             // handle triangle here

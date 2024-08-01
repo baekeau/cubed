@@ -1679,7 +1679,6 @@ MonoBehaviour:
   _input: {fileID: 11400000, guid: 26b529802175448dc98116616bed2dfc, type: 2}
   _moveDirection: {x: 0, y: 0}
   _lookDirection: {x: 0, y: 0}
-  _character: {fileID: 0}
 --- !u!114 &3509437445639612183
 MonoBehaviour:
   m_ObjectHideFlags: 0
