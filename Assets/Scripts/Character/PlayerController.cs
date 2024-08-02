@@ -76,13 +76,11 @@ namespace Character
         
         private void HandleTriangle()
         {
-            // handle triangle here
             Debug.Log("Triangle");
         }
 
         private void HandleAttack()
         {
-            // handle attack here
             Debug.Log("Attack");
         }
 
@@ -94,37 +92,31 @@ namespace Character
 
         private void HandleR1()
         {
-            // handle R1 here
             Debug.Log("R1");
         }
 
         private void HandleL2()
         {
-            // handle L2 here
             Debug.Log("L2");
         }
 
         private void HandleL1()
         {
-            // handle L1 here
             Debug.Log("L1");
         }
 
         private void HandleDash()
         {
-            // handle dash here
             Debug.Log("Dash");
         }
 
         private void HandleResume()
         {
-            // handle resume here
             Debug.Log("The game is resumed");
         }
 
         private void HandlePause()
         {
-            // handle pause here
             Debug.Log("The game is paused");
         }
 
